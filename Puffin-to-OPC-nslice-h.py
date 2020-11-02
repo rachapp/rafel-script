@@ -114,7 +114,6 @@ param_x.write(" sLengthOfElmZ2 = " + str(meshsizeZ2) +"\n")
 param_x.write(" /\r")
 param_x.close()
 
-
 """
 print("Saving y-field to binary file ..." + "\n")
 # reorder the data to binary file for Y-polarised field
@@ -144,7 +143,5 @@ param_y.write(" field_next = 'none'" + "\n")
 param_y.write(" $end\r")
 param_y.close()
 """
-
-f.close()
 
 print("DONE\n")
