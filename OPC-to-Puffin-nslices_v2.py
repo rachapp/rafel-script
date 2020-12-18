@@ -42,8 +42,8 @@ print ("Reading binary file ..." + f + "\n")
 data = np.fromfile(f, dtype='f8')
 complex_field = np.array(data[0:][::2]) + 1j*np.array(data[1:][::2])
 mag = np.abs(complex_field)
-phase = np.unwrap(np.angle(complex_field) - 0.25*np.pi) # phase correction while converting Puffin/OPC
-complex_field = mag*np.exp(1j*phase)
+phase = np.unwrap(np.angle(complex_field) + 1.25*np.pi) # phase correction while converting Puffin/OPC
+complex_field = mag*np.exp(1j*(-phase))
 
 pfile.close()
 
