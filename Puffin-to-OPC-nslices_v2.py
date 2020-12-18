@@ -60,8 +60,8 @@ gc.collect()
 
 print("Re-ordering the envelope into the OPC format" + "\n")
 # reorder the data to binary file for X-polarised field
-# bin_x = envelope_x*np.exp(1j*-(phase_x - np.pi))
-bin_x = Aperp_x_complex
+bin_x = envelope_x*np.exp(1j*-(phase_x))
+# bin_x = Aperp_x_complex
 bin_x = np.reshape(bin_x,nx*ny*nz)
 
 dfl_x = list(itertools.chain(*zip(np.real(bin_x), np.imag(bin_x)))) # interleave real and imaginary part
